@@ -1,0 +1,3 @@
+This Code works only on relevance files
+It can do ranking on cranfield files only when the space, dot and hyphen is removed from the query.
+The folder contains graphs with multuple threshold values for vocabulary eliminatipn on default and wacky 
