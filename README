@@ -1,6 +1,63 @@
-SOMETHING
-Main file is Projectmilestone3
-Precision -  Recall Curves 
-for relevance files
-stored it in gaps
+Project Milestone 1
+what it does?
+Performs positional inverted indexing on 36000 documents of JSON files. 
+Positional inverted index is a datastructure to store each and every doc content in an efficient way along with it's positions
+Takes about 3 ~4 mins to index all the documents.
+What else can it perform?
+It can perform query searches /Boolean style
+1. If you want  to find a document with a combine term such as "national park"
+> It will give all the document with all the documents that have national park in that order
+2. If the document contains term x and term y
+> the query would be Termx<space>TermY
+3. If the document contains termx or termy
+> TermX<+>termy
+4. If the document cpntains termx at a distance of two words
+for eg "New York is where I shouldn't go"
+New is at a distance of 1 word from is
+> [New NEAR/2 is] //2 here means at a position +1
+
+
+Project Milestone 2
+Disk Indexing
+Main file is Projectmilestone2v2
+We performed disk indexing i.e saving the index to the disk.
+stored it in gaps.
+Format of the disk stored index is 
+<dft,docid,tftd,p1,p2,p3,----pn>
+Dft = Documents that contain the term
+docid = number of the doc or doc id
+tftd = number of times that term is in the document
+p1 = first position and so on.
+secondly, the documents and positions are saved as gaps i.e doc 3, doc 5 have the term then it is saved as, 3,5-3,x-(5-3) so on, same for positions.
+It also does ranked retrivals for both phrase and boolean queries
+default, tf-idf, okapi bm25, wacky strategies.
+
+Project Milestone 3
+Calculates MEAN Average Precision, Mean Response Time and Throughput for all the different ranking strategies. It also performs vocabulary elimination and elimates
+the documents with low wqt(wieght of query terms) designated a threshold.
+
+DIFFERENT THRESHOLDS COMPARISON FOR DEFAULT 
+------------------------------------------------------
+Threshold = 0.8
+MAP = 0.203
+Throughput = 63.109
+MRT = 0.015
+------------------------------------------------------
+Threshold = 1.0
+MAP = 0.181
+Throughput = 113.715
+MRT = 0.00879
+------------------------------------------------------
+Threshold = 1.4(SELECTED THIS FOR HIGHEST MAP and Throughput)
+MAP = 0.258
+Throughput = 132.79
+MRT = 0.0075
+
+
+
+
+
+
+
+
 
