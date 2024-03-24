@@ -1,3 +1,16 @@
+Developed an advanced search engine tailored for U.S. National Parks, leveraging SQLite3 database and sophisticated retrieval strategies.
+
+Indexed and stored 36,800 documents with optimized retrieval time of O(1) using SQLite3 database, ensuring efficient access to park information.
+
+Implemented support for boolean and phrase queries to provide precise search results, enhancing user experience and search accuracy.
+
+Evaluated the search engine's efficiency, achieving a Mean Average Precision (MAP) of 0.258, indicating the relevance of search results, and a Mean Response Time of 132.79 milliseconds, ensuring fast response times for user queries.
+
+
+
+
+
+
 Project Milestone 1
 what it does?
 Performs positional inverted indexing on 36000 documents of JSON files. 
